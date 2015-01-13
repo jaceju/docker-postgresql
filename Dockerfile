@@ -1,6 +1,11 @@
 FROM sameersbn/ubuntu:14.04.20141218
 MAINTAINER sameer@damagehead.com
 
+RUN adduser postgres
+RUN groupmod -g 1020 dialout
+RUN groupmod -g 20 postgres
+RUN usermod -u 502 -g 20 postgres
+
 RUN apt-get update \
  && apt-get install -y postgresql postgresql-client pwgen \
  && rm -rf /var/lib/postgresql \

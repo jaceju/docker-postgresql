@@ -10,9 +10,6 @@ DB_NAME=${DB_NAME:-}
 DB_USER=${DB_USER:-}
 DB_PASS=${DB_PASS:-}
 
-# add user for postgresql
-usermod -u 1000 postgres
-
 # fix permissions and ownership of /var/lib/postgresql
 mkdir -p -m 0700 /var/lib/postgresql
 chown -R postgres:postgres /var/lib/postgresql

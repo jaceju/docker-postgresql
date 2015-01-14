@@ -1,5 +1,5 @@
-FROM sameersbn/ubuntu:14.04.20141218
-MAINTAINER sameer@damagehead.com
+FROM jaceju/ubuntu:14.04.20150114
+MAINTAINER jaceju@gmail.com
 
 RUN adduser postgres
 RUN groupmod -g 1020 dialout
